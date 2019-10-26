@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aniversario</title>
+</head>
+<body>
+    <div>
+        <input type="radio" name="genero" id="masculino" value="masculino" checked />
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="feninino" value="feninino" />
+        <label for="feninino">Feminino</label>
+    </div>
+    <div>
+        <button>Gerar mensagem</button>
+    </div>
+
+    <script>
+        function gerarMensagem() {
+            var nome = "Kira";
+            var input = document.querySelector("input:checked");
+            if (input.value == "masculino") {
+                var mensagem = "Hoje é o aniversario de "+nome+". Deseje fecidades a ele."
+            } else {
+                var mensagem = "Hoje é o aniversario de "+nome+". Deseje fecidades a ela."
+            }
+
+            alert(mensagem);
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = gerarMensagem;
+    </script>
+</body>
+</html>

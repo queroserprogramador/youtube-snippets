@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=200px, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini calculadora</title>
+</head>
+<body>
+    <input type="number" />
+    <input type="number" />
+    <button>+</button>
+    <button>-</button>
+
+    <script>
+        function soma() {
+            var inputs = document.getElementsByTagName("input");
+            var valor1 = parseInt(inputs[0].value);
+            var valor2 = parseInt(inputs[1].value);
+            var resultado = valor1 + valor2;
+
+            alert("O resultado da soma é "+resultado);
+
+        }
+
+        function subtracao() {
+            var inputs = document.getElementsByTagName("input");
+            var valor1 = parseInt(inputs[0].value);
+            var valor2 = parseInt(inputs[1].value);
+            var resultado = valor1 - valor2;
+
+            alert("O resultado da subtracao é "+resultado);
+        }
+
+        var botoes = document.getElementsByTagName("button");
+        botoes[0].onclick = soma;
+        botoes[1].onclick = subtracao;
+    </script>
+</body>
+</html>

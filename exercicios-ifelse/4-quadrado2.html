@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=200px, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cliquei no botao</title>
+</head>
+<body>
+    <input type="number" />
+    <button>Mostrar quadrado</button>
+
+    <script>
+        function mostrarQuadrado() {
+            var input = document.querySelector("input");
+            var numero = input.value;
+            numero = parseInt(numero);
+            var resultado = numero * numero;
+
+            alert("O número "+numero+" ao quadrado é "+resultado);
+        }
+
+        var botao = document.querySelector("button");
+        botao.onclick = mostrarQuadrado;
+    </script>
+</body>
+</html>

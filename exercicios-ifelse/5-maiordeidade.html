@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=200px, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cliquei no botao</title>
+</head>
+<body>
+    <input type="number" />
+    <button>É maior de idade?</button>
+
+    <script>
+        function mostrarMensagem() {
+            var input = document.querySelector("input");
+            var idade = input.value;
+            idade = parseInt(idade);
+            if (idade >= 18) {
+                alert("Você é maior de idade, pague os boletos!");
+            } else {
+                alert("Você é menor de idade. Aproveita enquanto os boleto não vem.");
+            }
+        }
+
+        var botao = document.querySelector("button");
+        botao.onclick = mostrarMensagem;
+    </script>
+</body>
+</html>
